@@ -137,23 +137,6 @@ app.post('/logout',(req,res) =>{
     });
 });
 
-// app.get('/change-password',checkAuthenticated, (req,res)=>{
-//     res.render('change-password.ejs')
-// })
-
-// app.post('/change-password', async (req,res)=>{
-//     const oldPassword = req.body.oldPassword;
-//     const newPassword = req.body.newPassword;
-//     console.log("Old Password:" ,oldPassword)
-//     console.log("User Password:" ,newPassword)
-//     if(oldPassword && req.user.password && await bcrypt.compare(oldPassword, req.user.password)){
-//         const hashedPassword = await bcrypt.hash(newPassword,10);
-//         req.user.password = hashedPassword
-//         console.log("Password updated")
-//     }
-//     res.redirect('/')
-// })
-
 //if not logged-in redirect them to login page 
 function checkAuthenticated(req, res, next)
 {
